@@ -8,6 +8,7 @@ lazy val root = project
     name := "gh-sonatype-example",
     homepage := Some(url("https://github.com/ruimo/gh-sonatype-example")),
     scalaVersion := scala3Version,
+    crossScalaVersions := List("2.12.14", "2.13.6", "3.0.0"),
     organization := "com.ruimo",
     licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
     developers := List(
