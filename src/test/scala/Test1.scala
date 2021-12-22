@@ -1,6 +1,8 @@
-import org.junit.Test
-import org.junit.Assert.*
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should
 
-class Test1:
-  @Test def t1(): Unit = 
-    assertEquals("I was compiled by Scala 3. :)", msg)
+class Test1 extends AnyFlatSpec with should.Matchers {
+  it should "Message is valid." in {
+    Main.msg === "Hello, World!"
+  }
+}

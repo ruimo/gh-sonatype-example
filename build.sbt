@@ -19,7 +19,9 @@ lazy val root = project
         url("https://github.com/ruimo")
       )
     ),
-    libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test",
+    libraryDependencies ++= Seq(
+      "org.scalatest" %% "scalatest" % "3.2.10" % Test
+    ),
     sonatypeCredentialHost := "s01.oss.sonatype.org",
     sonatypeRepository := "https://s01.oss.sonatype.org/service/local",
     releaseProcess -= publishArtifacts

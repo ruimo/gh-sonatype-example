@@ -1,5 +1,8 @@
-@main def hello: Unit = 
-  println("Hello world!")
-  println(msg)
+object Main {
+  val msg = "Hello, world!"
 
-def msg = "I was compiled by Scala 3. :)"
+  def main(args: Array[String]): Unit = {
+    println(msg)
+  }
+}
+
