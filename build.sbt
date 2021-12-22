@@ -1,3 +1,5 @@
+import ReleaseTransformations._
+
 val scala3Version = "3.0.2"
 
 lazy val root = project
@@ -17,5 +19,6 @@ lazy val root = project
     ),
     libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test",
     sonatypeCredentialHost := "s01.oss.sonatype.org",
-    sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
+    sonatypeRepository := "https://s01.oss.sonatype.org/service/local",
+    releaseProcess -= publishArtifacts
   )
