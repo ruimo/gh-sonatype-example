@@ -4,9 +4,18 @@ lazy val root = project
   .in(file("."))
   .settings(
     name := "gh-sonatype-example",
-    version := "0.1.0-SNAPSHOT",
-
     scalaVersion := scala3Version,
-
-    libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"
+    organization := "com.ruimo",
+    licenses := List("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0")),
+    developers := List(
+      Developer(
+        "ruimo",
+        "Shisei Hanai",
+        "ruimo.uno@gmail.com",
+        url("https://github.com/ruimo")
+      )
+    ),
+    libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test",
+    sonatypeCredentialHost := "s01.oss.sonatype.org",
+    sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
   )
